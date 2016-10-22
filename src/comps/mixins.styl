@@ -1,0 +1,93 @@
+margin-center()
+  margin-left auto
+  margin-right auto
+
+
+row(x, y)
+  display flex
+  flex-direction row
+
+  if x == center
+    justify-content center
+  else if x == start
+    justify-content flex-start
+  else if x == end
+    justify-content flex-end
+  else if x == stretch
+    justify-content stretch
+  else if x == around
+    justify-content space-around
+  else if x == between
+    justify-content space-between
+
+  if y == center
+    align-items center
+  else if y == start
+    align-items flex-start
+  else if y == end
+    align-items flex-end
+  else if y == stretch
+    align-items stretch
+  else if y == base
+    align-items baseline
+
+
+/* Stack children vertically. */
+column(x, y)
+  display flex
+  flex-direction column
+
+  if x == center
+    align-items center
+  else if x == start
+    align-items flex-start
+  else if x == end
+    align-items flex-end
+  else if x == stretch
+    align-items stretch
+  else if x == base
+    align-items baseline
+
+  if y == center
+    justify-content center
+  else if y == start
+    justify-content flex-start
+  else if y == end
+    justify-content flex-end
+  else if y == stretch
+    justify-content stretch
+  else if y == around
+    justify-content space-around
+  else if y == between
+    justify-content space-between
+
+doesWrap()
+  flex-wrap wrap
+
+
+doesNotWrap()
+  flex-wrap nowrap
+
+
+spans(width)
+  if width == 0
+    display none
+  else
+    flex-basis width
+    width width
+
+
+isOffsetLeft(fraction)
+  amount = (100% / 12) * fraction
+  margin-left amount
+
+
+isOffsetRight(fraction)
+  amount = (100% / 12) * fraction
+  margin-right amount
+
+
+isContained(max-width, width)
+  max-width max-width
+  if width
+    width width
