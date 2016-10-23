@@ -11,7 +11,7 @@ export default class Frame extends Component {
   render() {
     return(
       <div className="Frame">
-        <h1>Frame</h1>
+        <h1>Link Shortener</h1>
         {this.props.children}
       </div>
     )
